@@ -1,0 +1,1 @@
+UPDATE Tbl_Objectives SET Tbl_Objectives.Objective_Satisfied = False, Tbl_Objectives.Objective_Other_Than_Satisfied = False, Tbl_Objectives.Documents_Examined_Details = Null, Tbl_Objectives.SME_Interviewed_Names = Null, Tbl_Objectives.Validation_Text = Null, Tbl_Objectives.Notes = Null;

@@ -1,0 +1,1 @@
+UPDATE Tbl_Requirements SET Tbl_Requirements.Requirement_Satisfied = False, Tbl_Requirements.Requirement_Other_Than_Satisfied = False, Tbl_Requirements.Requirement_Special_Considerations_Satisfied = False, Tbl_Requirements.POAM_Date = Null;

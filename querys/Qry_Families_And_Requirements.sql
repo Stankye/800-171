@@ -1,0 +1,4 @@
+SELECT Tbl_Family_Names.Family_Number, Tbl_Family_Names.Family_Name, Tbl_Requirements.Requirement_Number, Tbl_Requirements.Requirement_Description, Tbl_Requirements.Requirement_Score, Tbl_Requirements.Requirement_Special_Considerations, Tbl_Requirements.Requirement_Special_Considerations_Score, Tbl_Requirements.Requirement_Satisfied, Tbl_Requirements.Requirement_Other_Than_Satisfied, Tbl_Requirements.Requirement_Special_Considerations_Satisfied, Tbl_Requirements.Requirement_Discussion, Tbl_Requirements.POAM, Tbl_Requirements.POAM_Date
+FROM Tbl_Requirements INNER JOIN (Tbl_Family_Names INNER JOIN LnkTbl_RequirementsToFamilies ON Tbl_Family_Names.Family_Number = LnkTbl_RequirementsToFamilies.Family_Number) ON Tbl_Requirements.[Requirement_Number] = LnkTbl_RequirementsToFamilies.[Requirement_Number]
+WHERE (((Tbl_Family_Names.Family_Number)=[Forms]![Frm_Families_and_Objectives]![Combo5]))
+ORDER BY Tbl_Requirements.Req_Sorting;

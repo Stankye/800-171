@@ -1,0 +1,3 @@
+SELECT Tbl_Family_Names.Family_Number, Tbl_Requirements.Requirement_Number, Tbl_Requirements.Requirement_Satisfied, Tbl_Requirements.Requirement_Other_Than_Satisfied, Tbl_Requirements.Requirement_Special_Considerations_Score, Tbl_Requirements.Requirement_Special_Considerations_Satisfied, Tbl_Family_Names.Sorting, Tbl_Requirements.Req_Sorting
+FROM Tbl_Requirements INNER JOIN (Tbl_Family_Names INNER JOIN LnkTbl_RequirementsToFamilies ON Tbl_Family_Names.Family_Number = LnkTbl_RequirementsToFamilies.Family_Number) ON Tbl_Requirements.[Requirement_Number] = LnkTbl_RequirementsToFamilies.[Requirement_Number]
+ORDER BY Tbl_Family_Names.Sorting, Tbl_Requirements.Req_Sorting;

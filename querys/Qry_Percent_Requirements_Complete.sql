@@ -1,0 +1,2 @@
+SELECT Count(Tbl_Requirements.Requirement_Number) AS CountOfRequirement_Number, Sum(Abs([Requirement_Satisfied])) AS TotalSatisfied, Sum(Abs([Requirement_Other_Than_Satisfied])) AS TotalOther, Sum(Abs([Requirement_Special_Considerations_Satisfied])) AS TotalSpecialSatisfied, ([CountOfRequirement_Number])-([TotalSatisfied]+[TotalOther]+[TotalSpecialSatisfied]) AS Remaining, Round((110-[Remaining])/Count([Tbl_Requirements].[Requirement_Number])*100) AS PercentCompleted
+FROM Tbl_Requirements;
